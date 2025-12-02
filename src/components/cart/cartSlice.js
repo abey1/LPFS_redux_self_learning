@@ -13,11 +13,6 @@ const cartSlice = createSlice({
           if (item.id === action.payload.id) {
             item.quantity += 1;
             item.price += action.payload.price;
-            // return {
-            //               ...item,
-            //               quantity: item.quantity + 1,
-            //               price: (item.quantity + 1) * item.price,
-            //             };
           } else return item;
         });
       } else {

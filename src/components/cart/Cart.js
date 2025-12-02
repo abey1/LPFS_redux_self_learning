@@ -10,9 +10,11 @@ const Cart = () => {
   return (
     <div>
       <h1>Cart</h1>
-      {cart.cart_products.map((cartItem) => {
-        return <CartItem />;
+      {cart.cart_products.map((cartItem, index) => {
+        let k = `cart-item` + index;
+        return <CartItem key={k} cartItem={cartItem} />;
       })}
+      <h1>${cart.total}</h1>
     </div>
   );
 };
